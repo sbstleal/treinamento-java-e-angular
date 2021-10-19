@@ -1,0 +1,47 @@
+<div class="card mb-0 rounded-0">
+  <div class="card-header card-custom-top">
+    <h5 class="align-middle text-dark">
+      Listar
+    </h5>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12">
+        <app-table-custom [items]="contas" [itemsPerPage]="15">
+          <ng-template appTableHeader>
+            <tr class="bg-gray-light">
+              <th>Agência</th>
+              <th>Número</th>
+              <th>Cliente</th>
+              <th>Saldo</th>
+              <th class="table-columns-acoes">Ações</th>
+            </tr>
+          </ng-template>
+          <ng-template appTableBody let-item>
+            <tr>
+              <td>{{item.agencia}}</td>
+              <td>{{item.numero}}</td>
+              <td>{{item.cliente.nome}}</td>
+              <td>R$ {{item.saldo | currency: 'BRL'}}</td>
+              <td class="table-columns-acoes">
+                <button type="button" class="btn btn-default btn-sm mr-1" title="Editar" (click)="update(item.id)">
+                  <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" title="Excluir" (click)="delete(item.id)">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </ng-template>
+          <ng-template appTableEmpty>
+            <tr>
+              <td colspan="5" class="text-center">
+                Nenhum registro foi encontrado
+              </td>
+            </tr>
+          </ng-template>
+        </app-table-custom>
+      </div>
+    </div>
+  </div>
+</div>
