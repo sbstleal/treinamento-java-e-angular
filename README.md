@@ -3,7 +3,7 @@
 ### 🔎 Layout
 
 <div align="center">
-  <img alt="Tela" title="#Tela" width="100%" height="auto" src="./README/layout.gif" />
+  <img alt="Tela" title="#Tela" width="100%" height="auto" src="./layout.gif" />
 </div>
 
 ---
