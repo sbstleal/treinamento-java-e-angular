@@ -29,7 +29,7 @@ As seguintes tecnologias foram utilizadas na construção do projeto:
 
 Para clonar o repositório do git:
 
-1. git remote add origin git remote add origin https://github.com/josegustavo312/indra-treinamento_java-angular.git
+1. git remote add origin git remote add origin https://github.com/sbstleal/treinamento-java-e-angular.git
 2. git branch -M main
 3. git push -u origin main
 
